@@ -15,20 +15,21 @@ module.exports = function (app) {
     app.get("/api/notes", function (req, res) {
       return res.json(notes);
     });
+
+    //   - POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
+    app.post("/api/notes", function (req, res) {
+      // req.body hosts is equal to the JSON post sent from the user
+      // This works because of our body parsing middleware
+      let newNote = req.body;
+      console.log(newNote);
+      notes.push(newNote);
+      fs.writeFile("./db/db.json", JSON.stringify(notes), function (err) {
+        if (err) throw err;
+        console.log("Success!");
+      });
+      res.json(true);
+    });
+
+    //   - DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
   });
 };
-// //   - POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
-//     app.post("/api/tables", function (req, res) {
-//       var data = req.body;
-//       console.log(data);
-//       if (tableData.length < 5) {
-//         tableData.push(data);
-//         res.json("success");
-//       } else {
-//         waitingList.push(data);
-//         res.json("tough luck");
-//       }
-//     });
-// };
-
-//   - DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
