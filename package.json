@@ -15,5 +15,14 @@
     "nodemon": "^2.0.7"
   },
   "keywords": [],
-  "description": ""
+  "description": "A web application where the user can easily, write, save, and delete notes.",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivianaarenas/Note-Taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vivianaarenas/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/vivianaarenas/Note-Taker#readme"
 }
