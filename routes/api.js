@@ -23,6 +23,11 @@ module.exports = function (app) {
       let newNote = req.body;
       console.log(newNote);
       notes.push(newNote);
+
+      for (let i = 0; i < notes.length; i++) {
+        notes[i].id = i + 1;
+      }
+
       fs.writeFile("./db/db.json", JSON.stringify(notes), function (err) {
         if (err) throw err;
         console.log("Success!");
@@ -30,6 +35,7 @@ module.exports = function (app) {
       res.json(true);
     });
 
-    //   - DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+    // //   - DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+    // app.delete("/api/notes/:id", function (req, res) {
   });
 };

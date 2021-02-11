@@ -4,7 +4,7 @@ const fs = require("fs");
 const express = require("express");
 
 const app = express();
-const PORT = process.env.PORT || 3033;
+const PORT = process.env.PORT || 3036;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,5 +16,5 @@ require("./routes/html")(app);
 
 //Starting the server
 app.listen(PORT, function () {
-  console.log("App listening on PORT " + PORT);
+  console.log(`App listening on PORT: ${PORT}`);
 });
