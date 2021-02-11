@@ -46,5 +46,4 @@ Note-Taker ![demo](Assets/server.gif)
 
 ## Live URL
 
-[Click Here to test the app out for yourself!]
-(https://frozen-anchorage-90158.herokuapp.com/)
+[Click Here to test the app out for yourself!](https://frozen-anchorage-90158.herokuapp.com/)
