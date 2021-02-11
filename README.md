@@ -30,13 +30,6 @@ MIT
 
 Open-Source- feel free to use!
 
-## Questions
-
-If you'd like to check out my other repositories, please visit:
-
-[Github Profile](https://github.com/vivianaarenas)
-
-If you have any additional questions or want to reach out, please [email](mailto:vivianaaarenas@gmail.com) me!
 
 ## Demo
 
@@ -47,3 +40,11 @@ Note-Taker ![demo](Assets/server.gif)
 ## Live URL
 
 [Click Here to test the app out for yourself!](https://frozen-anchorage-90158.herokuapp.com/)
+
+## Questions
+
+If you'd like to check out my other repositories, please visit:
+
+[Github Profile](https://github.com/vivianaarenas)
+
+If you have any additional questions or want to reach out, please [email](mailto:vivianaaarenas@gmail.com) me!
